@@ -11,15 +11,8 @@ public class Student {
 
     @Column(name = "name")
     private String name;
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10) {
+    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, int ifOnline, int ifLgbt, String religion, String gender) {
         this.name = name;
         this.q1 = q1;
         this.q2 = q2;
@@ -31,6 +24,10 @@ public class Student {
         this.q8 = q8;
         this.q9 = q9;
         this.q10 = q10;
+        this.ifOnline = ifOnline;
+        this.ifLgbt = ifLgbt;
+        this.religion = religion;
+        this.gender = gender;
     }
 
     public Student() {
@@ -56,6 +53,52 @@ public class Student {
     private int q9;
     @Column(name = "q10")
     private int q10;
+
+    @Column(name = "IfOnline")
+    private int ifOnline;
+    @Column(name = "IfLgbt")
+    private int ifLgbt;
+    @Column(name = "Religion")
+    private String religion;
+
+    @Column(name = "Gender")
+    private String gender;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() { return gender; }
+
+    public void setGender(String gender) { this.gender = gender; }
+
+    public int getIfOnline() {
+        return ifOnline;
+    }
+
+    public void setIfOnline(int ifOnline) {
+        this.ifOnline = ifOnline;
+    }
+
+    public int getIfLgbt() {
+        return ifLgbt;
+    }
+
+    public void setIfLgbt(int ifLgbt) {
+        this.ifLgbt = ifLgbt;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public void setReligion(String religion) {
+        this.religion = religion;
+    }
 
     public Long getId() {
         return id;

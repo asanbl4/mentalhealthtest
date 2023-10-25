@@ -1,0 +1,5 @@
+body {
+    background-image: url('my_photo.jpg'); /* Reference the image from the /static directory */
+    background-size: cover; /* Adjust background size as needed */
+    /* Additional background properties can be added here */
+}

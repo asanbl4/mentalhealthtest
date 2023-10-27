@@ -8,12 +8,12 @@
 <body>
 <div th:insert="header.html :: header"></div>
 <h3 th:text="'Hi, ' + ${name}"/>
-<h1 th:text="'Would you love to get your appointment online or offline?'"/>
+<h1 th:text="'Would you prefer to schedule your appointment online or in person?'"/>
 <hr>
 <div class="container mt-5">
     <form method="post">
         <button type="submit" class="btn btn-primary" name="submitButton" value="1" style="margin-right: 10px;">Online</button>
-        <button type="submit" class="btn btn-primary" name="submitButton" value="0" style="margin-right: 10px;">Offline</button>
+        <button type="submit" class="btn btn-primary" name="submitButton" value="0" style="margin-right: 10px;">In person</button>
 
     </form>
 </div>

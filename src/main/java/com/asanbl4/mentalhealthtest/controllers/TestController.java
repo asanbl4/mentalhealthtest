@@ -118,9 +118,9 @@ public class TestController {
     }
 
     @PostMapping("/lgbt")
-    public String lgbtPos(@RequestParam("submitButton") String submitButtonValue, Model model){
+    public String lgbtPos(@RequestParam(required = false) String identify, Model model){
         Student last_student = get_LastStudent();
-        last_student.setIfLgbt(Integer.parseInt(submitButtonValue));
+        last_student.setIdentify(identify);
         studentRepository.save(last_student);
         return "redirect:/religion";
     }

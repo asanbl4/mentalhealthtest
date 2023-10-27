@@ -8,13 +8,12 @@
 <body>
 <div th:insert="header.html :: header"></div>
 <h3 th:text="'Hi, ' + ${name}"/>
-<h1 th:text="'Are you a part of LGBTQ community and want a psychologist that tolerates your perspective?'"/>
+<h1 th:text="'How do you identify? (straight, gay, lesbian, bi, prefer not to say)'"/>
 <hr>
 <div class="container mt-5">
   <form method="post">
-    <button type="submit" class="btn btn-primary" name="submitButton" value="1" style="margin-right: 10px;">Yes</button>
-    <button type="submit" class="btn btn-primary" name="submitButton" value="0" style="margin-right: 10px;">No</button>
-
+    <input type="text" name="identify" placeholder="Enter your identification" class="form-control"><br>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
 

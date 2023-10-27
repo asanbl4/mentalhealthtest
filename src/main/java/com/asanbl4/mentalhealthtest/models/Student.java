@@ -12,7 +12,7 @@ public class Student {
     @Column(name = "name")
     private String name;
 
-    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, int ifOnline, int ifLgbt, String religion, String gender) {
+    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, int ifOnline, String identify, String religion, String gender) {
         this.name = name;
         this.q1 = q1;
         this.q2 = q2;
@@ -25,7 +25,7 @@ public class Student {
         this.q9 = q9;
         this.q10 = q10;
         this.ifOnline = ifOnline;
-        this.ifLgbt = ifLgbt;
+        this.identify = identify;
         this.religion = religion;
         this.gender = gender;
     }
@@ -54,10 +54,18 @@ public class Student {
     @Column(name = "q10")
     private int q10;
 
+    public String getIdentify() {
+        return identify;
+    }
+
+    public void setIdentify(String identify) {
+        this.identify = identify;
+    }
+
     @Column(name = "IfOnline")
     private int ifOnline;
-    @Column(name = "IfLgbt")
-    private int ifLgbt;
+    @Column(name = "Identification")
+    private String identify;
     @Column(name = "Religion")
     private String religion;
 
@@ -84,13 +92,7 @@ public class Student {
         this.ifOnline = ifOnline;
     }
 
-    public int getIfLgbt() {
-        return ifLgbt;
-    }
 
-    public void setIfLgbt(int ifLgbt) {
-        this.ifLgbt = ifLgbt;
-    }
 
     public String getReligion() {
         return religion;

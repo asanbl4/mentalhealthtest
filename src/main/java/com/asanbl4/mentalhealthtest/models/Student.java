@@ -12,7 +12,7 @@ public class Student {
     @Column(name = "name")
     private String name;
 
-    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, int ifOnline, String identify, String religion, String gender) {
+    public Student(String name, int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, int ifOnline, String identify, String religion, String preference, Boolean pref_lgbt, Boolean pref_religion) {
         this.name = name;
         this.q1 = q1;
         this.q2 = q2;
@@ -27,11 +27,36 @@ public class Student {
         this.ifOnline = ifOnline;
         this.identify = identify;
         this.religion = religion;
-        this.gender = gender;
+        this.preference = preference;
+        this.pref_lgbt = pref_lgbt;
+        this.pref_religion = pref_religion;
     }
 
     public Student() {
     }
+
+
+    @Column(name = "pref_lgbt")
+    private Boolean pref_lgbt;
+
+    public Boolean isPref_lgbt() {
+        return pref_lgbt;
+    }
+
+    public void setPref_lgbt(Boolean pref_lgbt) {
+        this.pref_lgbt = pref_lgbt;
+    }
+
+    public Boolean isPref_religion() {
+        return pref_religion;
+    }
+
+    public void setPref_religion(Boolean pref_religion) {
+        this.pref_religion = pref_religion;
+    }
+
+    @Column(name = "pref_religion")
+    private Boolean pref_religion;
 
     @Column(name = "q1")
     private int q1;
@@ -69,8 +94,8 @@ public class Student {
     @Column(name = "Religion")
     private String religion;
 
-    @Column(name = "Gender")
-    private String gender;
+    @Column(name = "Preferences")
+    private String preference;
 
     public String getName() {
         return name;
@@ -80,9 +105,13 @@ public class Student {
         this.name = name;
     }
 
-    public String getGender() { return gender; }
+    public String getPreference() {
+        return preference;
+    }
 
-    public void setGender(String gender) { this.gender = gender; }
+    public void setPreference(String preference) {
+        this.preference = preference;
+    }
 
     public int getIfOnline() {
         return ifOnline;

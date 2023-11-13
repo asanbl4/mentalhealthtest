@@ -88,9 +88,11 @@ public class TestController {
     }
 
     @PostMapping("/gender")
-    public String genderPos(@RequestParam(required = false) String gender, Model model){
+    public String genderPos(@RequestParam(name = "religion", required = false, defaultValue = "false") boolean religion, @RequestParam(name = "lgbt", required = false, defaultValue = "false") boolean lgbt, @RequestParam(name = "preference") String preference, Model model){
         Student last_student = get_LastStudent();
-        last_student.setGender(gender);
+        last_student.setPref_lgbt(lgbt);
+        last_student.setPref_religion(religion);
+        last_student.setPreference(preference);
         studentRepository.save(last_student);
         return "redirect:/online";
     }

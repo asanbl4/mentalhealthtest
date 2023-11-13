@@ -13,12 +13,22 @@
 <div class="container mt-5 mb-5">
   <h1 th:text="'Do you have any specific preferences for your therapist?'"/>
   <form method="post">
-    <input type="text" name="gender" placeholder="Enter preferences" class="form-control"><br>
+    <!-- Checkboxes for Religion and LGBT preferences -->
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="religion" value="true" id="religionCheckbox">
+      <label class="form-check-label" for="religionCheckbox">Religion</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="lgbt" value="true" id="lgbtCheckbox">
+      <label class="form-check-label" for="lgbtCheckbox">LGBT</label>
+    </div>
+
+    <!-- Input field for gender preference -->
+    <input type="text" name="preference" placeholder="Enter other preferences" class="form-control"><br>
+
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
-
-
 
 <div th:insert="footer.html :: footer"></div>
 </body>

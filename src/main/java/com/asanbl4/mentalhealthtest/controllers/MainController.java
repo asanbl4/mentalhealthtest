@@ -18,7 +18,7 @@ public class MainController {
     public String home(Model model){ return "home"; }
     @PostMapping("/")
     public String homePos(@RequestParam String name, Model model){
-        Student student = new Student(name, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, "", "", "");
+        Student student = new Student(name, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, "", "", "", false, false);
         studentRepository.save(student);
         return "redirect:/test/1";
     }
